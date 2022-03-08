@@ -19,14 +19,14 @@ jobs:
               run: |
                 echo "CONFIG_TARGET_ipq807x=y" > .config
                 echo "CONFIG_TARGET_ipq807x_generic=y\n" >> .config
-                echo "CONFIG_TARGET_MULTI_PROFILE=y\n" >> .config
-                echo "CONFIG_TARGET_ALL_PROFILES=y\n" >> .config
-                echo "CONFIG_TARGET_PER_DEVICE_ROOTFS=y\n" >> .config
-                echo "CONFIG_TARGET_ROOTFS_INITRAMFS=y\n" >> .config
-                echo "CONFIG_TARGET_INITRAMFS_COMPRESSION_ZSTD=y\n" >> .config
-                echo "CONFIG_PACKAGE_luci=y\n" >> .config
-                echo "CONFIG_PACKAGE_kmod-qca-nss-dp=y\n" >> .config
-                echo "CONFIG_PACKAGE_qca-ssdk-shell=y\n" >> .config
+                echo "CONFIG_TARGET_MULTI_PROFILE=n" >> .config
+                echo "CONFIG_TARGET_ALL_PROFILES=n" >> .config
+                echo "CONFIG_TARGET_PER_DEVICE_ROOTFS=y" >> .config
+                echo "CONFIG_TARGET_ROOTFS_INITRAMFS=y" >> .config
+                echo "CONFIG_TARGET_INITRAMFS_COMPRESSION_ZSTD=y" >> .config
+                echo "CONFIG_PACKAGE_luci=y" >> .config
+                echo "CONFIG_PACKAGE_kmod-qca-nss-dp=n" >> .config
+                echo "CONFIG_PACKAGE_qca-ssdk-shell=n" >> .config
                 make defconfig
 
             - name: Download package sources
